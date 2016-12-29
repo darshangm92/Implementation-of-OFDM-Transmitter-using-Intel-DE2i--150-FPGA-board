@@ -1,0 +1,57 @@
+module call(clk,
+            reset_n
+				output_sink_error,
+				output_sink_sop,
+				output_sink_eop,
+				output_fftpts_in,
+				outout_fftpts_out
+    	);
+			input clk;
+			output reset_n;
+			output output_sink_error;
+			output reg [3:0] output_fftpts_in;
+			output reg [3:0] output_fftpts_out;
+			output output_sink_eop;
+			output output_sink_sop;
+			
+			reg [30:0] counter;
+			
+assign input_sink_error = 2'b00;
+
+always @ (negedge clk)
+    begin                                                                                         
+      if(reset_n==1'b1)
+        counter <= 0;
+      else                                                                                       
+        counter <= counter + 1;                                                     
+    end           
+
+always @ (negedge clk)
+    begin                                                                                        
+      if(reset_n==1'b1)
+        output_sink_sop<=1'b0;                                                                              
+     else                                                                                     
+       begin                                                                                        
+         if(counter==0)                                                     
+           output_sink_sop<=1'b1;                                                                             
+         else                                                                   
+           output_sink_sop<=1'b0;                                                                   
+       end
+    end 			
+
+always @ (negedge clk)
+     begin
+	   if(counter>=15)
+        output_sink_eop<=1'b1;
+		   counter <= 0;
+		else
+		  output_sink_eop<=1'b0;
+	  end
+	  
+assign output_fftpts_out = 4'b1000;
+assign output_fftpts_in  = 4'b1000;
+endmodule
+	  
+
+		
+	        		
