@@ -1,0 +1,7 @@
+
+State Machine - |ofdm_transmitter|ifft_8p:inst1|ifft_8p_fft_ii_0:fft_ii_0|auk_dspip_r22sdf_top:auk_dspip_r22sdf_top_inst|auk_dspip_avalon_streaming_block_source:source_control_inst|state
+Name state.OUT_3 state.OUT_2 state.OUT_1 state.IDLE 
+state.IDLE 0 0 0 0 
+state.OUT_1 0 0 1 1 
+state.OUT_2 0 1 0 1 
+state.OUT_3 1 0 0 1 
