@@ -1,0 +1,30 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate E:\OFDM\ifft_8p.qsys --block-symbol-file --output-directory=E:\OFDM\ifft_8p --family="Cyclone IV GX" --part=EP4CGX150DF31C7
+Progress: Loading OFDM/ifft_8p.qsys
+Progress: Reading input file
+Progress: Adding fft_ii_0 [altera_fft_ii 15.0]
+Progress: Parameterizing module fft_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate E:\OFDM\ifft_8p.qsys --synthesis=VERILOG --greybox --output-directory=E:\OFDM\ifft_8p\synthesis --family="Cyclone IV GX" --part=EP4CGX150DF31C7
+Progress: Loading OFDM/ifft_8p.qsys
+Progress: Reading input file
+Progress: Adding fft_ii_0 [altera_fft_ii 15.0]
+Progress: Parameterizing module fft_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ifft_8p: Generating ifft_8p "ifft_8p" for QUARTUS_SYNTH
+Info: fft_ii_0: "ifft_8p" instantiated altera_fft_ii "fft_ii_0"
+Info: ifft_8p: Done "ifft_8p" with 2 modules, 47 files
+Info: Generating third-party timing and resource estimation model ...
+Info: Done generating third-party timing and resource estimation model.
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
